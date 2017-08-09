@@ -57,6 +57,7 @@ void Tangle2EventAction::BeginOfEventAction(const G4Event*)
   Tangle2::phiA2 = 500;
   Tangle2::phiB2 = 500;
 
+
  
   
 }
@@ -65,6 +66,8 @@ void Tangle2EventAction::EndOfEventAction(const G4Event*)
 {   
   fpTangle2VSteppingAction->EndOfEventAction();
   
+  Tangle2::IdNumber +=1;
+  G4cout<<"id no "<<Tangle2::IdNumber<<G4endl;
   
   //Check if the event is a 'true lab event'
   //that means exactly 4 fired crystals:
@@ -135,6 +138,8 @@ void Tangle2EventAction::EndOfEventAction(const G4Event*)
        
 	man->FillNtupleDColumn(57, Tangle2::thetaB2/radian);
 	man->FillNtupleDColumn(58, Tangle2::phiB2/radian);
+
+	man->FillNtupleIColumn(59, Tangle2::IdNumber);
 
 	man->AddNtupleRow();
    }

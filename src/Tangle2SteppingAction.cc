@@ -116,7 +116,7 @@ void Tangle2SteppingAction::UserSteppingAction(const G4Step* step)
 
   //For the first particle and first step paramA1/B1 are set to zero
   //These will be used to determine when the FIRST Compton event 
-  if((ID==2)&&(stepNumber==1)){
+  if((ID==1)&&(stepNumber==1)){
     paramA = 0;
     paramB = 0;
   }

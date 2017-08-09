@@ -37,6 +37,7 @@ namespace Tangle2 {
   extern G4ThreadLocal G4double thetaB2;
   extern G4ThreadLocal G4double phiA2;
   extern G4ThreadLocal G4double phiB2;
+  extern G4ThreadLocal G4long IdNumber;
   
 }
 
